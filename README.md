@@ -42,13 +42,16 @@ A full-stack web application built with **React (TypeScript)** and **Django REST
 
 ## Quickstart & Setup
 
-### 1. Clone & Navigate
+### ⚡ One-Click Start (Windows)
+Double-click or run:
 ```bash
-git clone <repo-url>
-cd fs-assessment-spotter
+.\run.bat
 ```
+This automatically boots up the Django backend, starts the Vite frontend dev server, and opens your browser at `http://localhost:5173`.
 
-### 2. Backend Setup
+---
+
+### Manual Setup
 ```bash
 # Windows:
 .\start_backend.bat
