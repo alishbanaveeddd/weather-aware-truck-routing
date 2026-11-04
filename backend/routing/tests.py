@@ -181,3 +181,4 @@ class RoutingAPITests(TestCase):
         self.assertEqual(resp.status_code, 200)
         self.assertIn("points", resp.data)
         self.assertGreater(len(resp.data["points"]), 0)
+
