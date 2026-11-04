@@ -129,41 +129,6 @@ Test coverage includes:
 - `test_route_ranking_preference_order`: Validates 4-tier tiebreaker sorting order.
 - `RoutingAPITests`: Integration tests for `/api/routes/`, `/api/heatmap/`, `/api/geocode/`.
 
----
-
-## 5–10 Min Loom Walkthrough Guide
-
-Use this structure when recording your walkthrough video:
-
-1. **Introduction & Overview (1 min)**:
-   - Introduce the Weather-Aware Truck Routing app.
-   - Explain the core problem: heavy trucks face dangerous rollovers in high winds and hydroplaning/traction loss in severe rain and snow.
-2. **Architecture & Tech Stack (1 min)**:
-   - React 19 + TypeScript frontend with Tailwind CSS and react-leaflet.
-   - Django REST Framework backend with custom Risk Engine.
-   - Routing via ORS/OSRM and weather forecasting.
-3. **Demo Scenario 1: Heavy Load Wind Escalation (2 mins)**:
-   - Click "Chicago ➔ Indianapolis" preset.
-   - Set Load Weight to 45,000 lbs ($>40,000\text{ lbs}$).
-   - Click "Calculate & Recommend Routes".
-   - Highlight the 3 routes rendered on the map.
-   - Show how Route 1 is ranked #1 because it has the fewest Severe/No-Travel miles.
-   - Click a checkpoint pin with orange/red risk to show the popup with ETA, Wind speed, and the Load Rule warning banner.
-4. **Demo Scenario 2: Sampling Intervals & Checkpoint Details (1.5 mins)**:
-   - Switch sampling interval between **10 mi**, **25 mi**, and **50 mi**.
-   - Open the "Checkpoints" tab to show the mile-by-mile breakdown with exact arrival timestamps, wind, rain, snow, temperature, and risk classifications.
-5. **Demo Scenario 3: Weather Heatmap & 48h Slider (1.5 mins)**:
-   - Toggle "Enable Heatmap".
-   - Drag the forecast slider from 0h to +48h or click "▶ Play" to watch the weather front progress across the trip corridor.
-   - Show how the risk gradient shifts over time.
-6. **Codebase Tour & Tests (1 min)**:
-   - Show `backend/routing/services/risk_engine.py` where load rules and 4-tier ranking are defined.
-   - Run `python manage.py test` in the terminal to show all tests passing.
-7. **Wrap-up**:
-   - Summarize the clean separation of concerns and robust error handling.
-
----
-
 ## API Reference
 
 ### `POST /api/routes/`
