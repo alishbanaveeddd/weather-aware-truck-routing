@@ -3,6 +3,7 @@
 A full-stack web application built with **React (TypeScript)** and **Django REST Framework** that helps truck drivers select the safest route balancing weather risk, truck load weight, and travel time.
 
 ---
+## vercel deployed : https://weather-aware-truck-routing-seven-tau.vercel.app/
 
 ## Deliverables & Features Overview
 
